@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DSo-fD-V5s">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="syi-eL-zJE">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="DSo-fD-V5s" customClass="ProfileViewController" customModule="FacebookLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0ra-cL-NS2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ipZ-Cc-bA0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="image" rowHeight="200" id="7Py-mO-J9i" customClass="ImageTableViewCell" customModule="FacebookLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Py-mO-J9i" id="B6R-kD-Sn4">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iPY-wS-c0p">
+                                                    <rect key="frame" x="138" y="31" width="138" height="138"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="profile_image"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="iPY-wS-c0p" secondAttribute="height" id="cla-gu-lxa"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iPY-wS-c0p" firstAttribute="top" secondItem="B6R-kD-Sn4" secondAttribute="topMargin" priority="750" constant="20" id="9aN-0d-sec"/>
+                                                <constraint firstItem="iPY-wS-c0p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="B6R-kD-Sn4" secondAttribute="leading" constant="20" id="9h4-fn-1vb"/>
+                                                <constraint firstItem="iPY-wS-c0p" firstAttribute="centerX" secondItem="B6R-kD-Sn4" secondAttribute="centerX" id="M5U-Ew-YHI"/>
+                                                <constraint firstItem="iPY-wS-c0p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="B6R-kD-Sn4" secondAttribute="topMargin" constant="20" id="eiF-KO-8Mv"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iPY-wS-c0p" secondAttribute="trailing" constant="20" id="ii0-MU-biz"/>
+                                                <constraint firstItem="iPY-wS-c0p" firstAttribute="centerY" secondItem="B6R-kD-Sn4" secondAttribute="centerY" id="qzq-Cw-4Sg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iPY-wS-c0p" secondAttribute="bottom" priority="750" constant="20" id="xDy-Eo-0U0"/>
+                                                <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="iPY-wS-c0p" secondAttribute="bottom" constant="20" id="yRw-kt-1XP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coverImageView" destination="iPY-wS-c0p" id="7q2-Qg-tHA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="greeting" rowHeight="92" id="q8K-vF-O4D" customClass="GreetingTableViewCell" customModule="FacebookLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="228" width="414" height="92"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q8K-vF-O4D" id="LnP-aV-ge0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ncg-yB-zuQ">
+                                                    <rect key="frame" x="30" y="10" width="354" height="69"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="44S-Gh-L7p">
+                                                            <rect key="frame" x="0.0" y="0.0" width="354" height="30.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="profile_greeting_label"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Larissa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yl-wU-yFe">
+                                                            <rect key="frame" x="0.0" y="30.5" width="354" height="38.5"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="profile_name_label"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="28"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ncg-yB-zuQ" secondAttribute="trailing" constant="30" id="HNS-kn-5bG"/>
+                                                <constraint firstItem="ncg-yB-zuQ" firstAttribute="leading" secondItem="LnP-aV-ge0" secondAttribute="leading" constant="30" id="VqT-Cc-XDZ"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ncg-yB-zuQ" secondAttribute="bottom" constant="10" id="oBv-qS-h9W"/>
+                                                <constraint firstItem="ncg-yB-zuQ" firstAttribute="top" secondItem="LnP-aV-ge0" secondAttribute="top" constant="10" id="pCb-t9-gdf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="greetingLabel" destination="44S-Gh-L7p" id="H0E-PQ-zpu"/>
+                                            <outlet property="nameLabel" destination="8yl-wU-yFe" id="sKU-9A-zVt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="email" rowHeight="61" id="3H4-OT-nWj" customClass="InfoTableViewCell" customModule="FacebookLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="320" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3H4-OT-nWj" id="vIX-oy-9dc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvn-68-icH">
+                                                    <rect key="frame" x="40" y="10" width="111" height="41"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="profile_email_label"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fvn-68-icH" firstAttribute="leading" secondItem="vIX-oy-9dc" secondAttribute="leading" constant="40" id="EPR-jo-q5z"/>
+                                                <constraint firstAttribute="bottom" secondItem="fvn-68-icH" secondAttribute="bottom" constant="10" id="Mhd-62-RB3"/>
+                                                <constraint firstItem="fvn-68-icH" firstAttribute="top" secondItem="vIX-oy-9dc" secondAttribute="top" constant="10" id="eHn-Jd-IIa"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fvn-68-icH" secondAttribute="trailing" constant="20" symbolic="YES" id="msf-PS-tMj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoLabel" destination="fvn-68-icH" id="vp9-H9-zAh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="id" rowHeight="61" id="EOO-yc-JSV" customClass="InfoTableViewCell" customModule="FacebookLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="381" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EOO-yc-JSV" id="551-St-Pcc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7b-4g-jVg">
+                                                    <rect key="frame" x="40" y="10" width="19" height="41"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="profile_id_label"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="v7b-4g-jVg" firstAttribute="leading" secondItem="551-St-Pcc" secondAttribute="leading" constant="40" id="UVe-Ht-btI"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v7b-4g-jVg" secondAttribute="trailing" constant="20" symbolic="YES" id="gNH-k9-7fU"/>
+                                                <constraint firstAttribute="bottom" secondItem="v7b-4g-jVg" secondAttribute="bottom" constant="10" id="hd6-eb-jf2"/>
+                                                <constraint firstItem="v7b-4g-jVg" firstAttribute="top" secondItem="551-St-Pcc" secondAttribute="top" constant="10" id="jq9-4r-WCI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="infoLabel" destination="v7b-4g-jVg" id="J5A-r2-FzU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="logout" rowHeight="61" id="dGx-E4-fF4" customClass="LogoutTableViewCell" customModule="FacebookLogin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="442" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dGx-E4-fF4" id="e6f-uy-EYz">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="61"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5H-Hb-h0t">
+                                                    <rect key="frame" x="174.5" y="10" width="65" height="41"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="profile_logout_label"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.88235294119999996" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="X5H-Hb-h0t" secondAttribute="trailing" constant="30" id="KG7-Jl-K0g"/>
+                                                <constraint firstAttribute="bottom" secondItem="X5H-Hb-h0t" secondAttribute="bottom" constant="10" id="Odg-tC-YW3"/>
+                                                <constraint firstItem="X5H-Hb-h0t" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e6f-uy-EYz" secondAttribute="leading" constant="40" id="ZoU-U8-Rev"/>
+                                                <constraint firstItem="X5H-Hb-h0t" firstAttribute="centerX" secondItem="e6f-uy-EYz" secondAttribute="centerX" id="ikk-hV-iza"/>
+                                                <constraint firstItem="X5H-Hb-h0t" firstAttribute="top" secondItem="e6f-uy-EYz" secondAttribute="top" constant="10" id="jlH-Aw-vEP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="profile_logout_cell"/>
+                                        <connections>
+                                            <outlet property="logoutLabel" destination="X5H-Hb-h0t" id="iCL-ny-HS2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ipZ-Cc-bA0" firstAttribute="leading" secondItem="lYT-GH-3lf" secondAttribute="leading" id="O9q-O1-fUY"/>
+                            <constraint firstAttribute="bottom" secondItem="ipZ-Cc-bA0" secondAttribute="bottom" id="Xu8-Vx-n5H"/>
+                            <constraint firstItem="ipZ-Cc-bA0" firstAttribute="trailing" secondItem="lYT-GH-3lf" secondAttribute="trailing" id="ZFg-Tw-w5a"/>
+                            <constraint firstItem="ipZ-Cc-bA0" firstAttribute="top" secondItem="0ra-cL-NS2" secondAttribute="top" id="not-CV-WKT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lYT-GH-3lf"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ipZ-Cc-bA0" id="JRw-pY-t2s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Sl-6m-j9W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="8.7053571428571423"/>
+        </scene>
+    </scenes>
+</document>
